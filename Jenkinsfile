@@ -4,6 +4,7 @@ ipeline {
        stage('Build Code') {
            steps {
                sh "echo "Building Artifact"
+              echo "testing"
            }
        }
       stage('Deploy Code') {
