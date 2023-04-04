@@ -1,15 +1,21 @@
-ipeline {
+pipeline {
    agent any
    stages {
-       stage('Build Code') {
+       stage('1-Build Code') {
            steps {
-               sh "echo "Building Artifact"
+               echo "Building Artifact"
+               echo "testing"
            }
        }
-      stage('Deploy Code') {
+      stage('2-Deploy Code') {
           steps {
-               sh "echo "Deploying Code"                                                                                                                                                                    
+               echo "Deploying Code"                                                                                                                                                                    
           }
+      }
+      stage('3-testing code'){
+        steps{
+            sh 'lscpu'
+        }
       }
    }
 }
